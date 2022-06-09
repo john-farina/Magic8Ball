@@ -51,6 +51,7 @@ function sayRandomThing() {
     let randomNum = randomNumGen(26);
 
     addAnimateClass(magicBall, 'shake', 2);
+    addAnimateClass(triangle, 'fadeOut', 1);
     setTimeout(function () {
         fortuneText.innerHTML = phrases[randomNum].toUpperCase();
         addAnimateClass(triangle, 'fadeIn', 2);
