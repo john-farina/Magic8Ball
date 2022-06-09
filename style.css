@@ -32,6 +32,11 @@ body {
     width: 400px;
     height: 400px;
     background: var(--ballGradient);
+    /* animation: shake 2s; */
+}
+
+.shake {
+    animation: shake 2s;
 }
 
 #ball_inner-circle {
@@ -60,7 +65,7 @@ body {
 }
 
 .fadeIn {
-    animation: fadeIn 2s;
+    animation: fadeIn 1s;
 }
 
 #triangle_text {
@@ -100,5 +105,27 @@ body {
         height: 130px;
         width: 150px;
         opacity: 100%;
+    }
+}
+
+@keyframes shake {
+    0% {
+        margin-left: 0px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        margin-right: 0px;
+    }
+    20% {
+        margin-bottom: 20px;
+        margin-left: 50px;
+    }
+    40% {
+        margin-left: -50px;
+    }
+    100% {
+        margin-left: 0px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        margin-right: 0px;
     }
 }

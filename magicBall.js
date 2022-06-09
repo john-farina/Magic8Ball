@@ -3,7 +3,6 @@ const phrases = [
     'Ask again later',
     'Better not tell you now',
     'Cannot predict now',
-    'Concentrate and ask again',
     "Don't count on it",
     'It is certain',
     'It is decidedly so',
@@ -28,6 +27,7 @@ const phrases = [
 ];
 let animationGoing = false;
 
+const magicBall = document.querySelector('#ball-container');
 const triangle = document.querySelector('#inner-circle_triangle');
 const fortuneText = document.querySelector('#fortuneText');
 const resetButton = document.querySelector('#resetButton');
@@ -49,8 +49,12 @@ function addAnimateClass(object, classname, seconds) {
 
 function sayRandomThing() {
     let randomNum = randomNumGen(26);
-    fortuneText.innerHTML = phrases[randomNum].toUpperCase();
-    addAnimateClass(triangle, 'fadeIn', 2);
+
+    addAnimateClass(magicBall, 'shake', 2);
+    setTimeout(function () {
+        fortuneText.innerHTML = phrases[randomNum].toUpperCase();
+        addAnimateClass(triangle, 'fadeIn', 2);
+    }, 1000);
 }
 
 resetButton.addEventListener('click', function () {
@@ -58,5 +62,3 @@ resetButton.addEventListener('click', function () {
         sayRandomThing();
     }
 });
-
-addAnimateClass(triangle, 'fadeIn', 2);
