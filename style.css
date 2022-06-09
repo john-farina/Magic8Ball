@@ -1,0 +1,104 @@
+:root {
+    --blueGradient: linear-gradient(
+        233deg,
+        rgba(106, 139, 253, 1) 10%,
+        rgba(47, 73, 255, 1) 54%,
+        rgba(26, 39, 185, 1) 81%
+    );
+    --ballGradient: radial-gradient(
+        circle,
+        rgba(57, 57, 57, 1) 40%,
+        rgba(22, 22, 22, 1) 100%
+    );
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+        'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#ball-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    width: 400px;
+    height: 400px;
+    background: var(--ballGradient);
+}
+
+#ball_inner-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    width: 240px;
+    height: 240px;
+    background-color: rgb(14, 0, 15);
+    border-style: solid;
+    border-color: rgb(31, 31, 31);
+    border-width: 6px;
+}
+
+#inner-circle_triangle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 130px;
+    width: 150px;
+    clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
+    background: var(--blueGradient);
+    margin-bottom: 20px;
+}
+
+.fadeIn {
+    animation: fadeIn 2s;
+}
+
+#triangle_text {
+    position: absolute;
+    text-align: center;
+    overflow-y: visible;
+    width: 70px;
+    height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#fortuneText {
+    color: rgb(230, 236, 255);
+    font-size: 0.7rem;
+    top: 0;
+    margin-top: 30px;
+    margin-bottom: 0px;
+    text-shadow: -1px 2px 1px rgba(0, 0, 0, 60%);
+}
+
+#fortuneText-description {
+    color: white;
+    font-size: 20px;
+}
+
+@keyframes fadeIn {
+    0% {
+        height: 115px;
+        width: 135px;
+        opacity: 0%;
+    }
+    100% {
+        height: 130px;
+        width: 150px;
+        opacity: 100%;
+    }
+}
