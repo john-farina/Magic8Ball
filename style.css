@@ -15,6 +15,7 @@
 body {
     margin: 0;
     height: 100vh;
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 70px;
@@ -24,7 +25,17 @@ body {
         'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: 1;
+}
+
 #ball-container {
+    z-index: 2;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -146,6 +157,7 @@ body {
 }
 
 #resetButton {
+    z-index: 2;
     border-radius: 100%;
     border-style: solid;
     border-color: black;
