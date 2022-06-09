@@ -16,7 +16,6 @@ body {
     background-color: black;
     margin: 0;
     height: 100vh;
-    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 70px;
@@ -33,6 +32,8 @@ body {
     min-width: 100%;
     min-height: 100%;
     z-index: 1;
+    height: 100vh;
+    width: 100vh;
 }
 
 #ball-container {
