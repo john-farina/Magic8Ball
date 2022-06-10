@@ -149,8 +149,8 @@ body {
 }
 
 #resetButton {
-    margin-top: 500px;
-    position: fixed;
+    margin-top: 300px;
+    position: absolute;
     z-index: 2;
     border-radius: 100%;
     border-style: solid;
