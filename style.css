@@ -34,7 +34,6 @@ body {
 }
 
 #ball-container {
-    position: absolute;
     z-index: 2;
     display: flex;
     align-items: center;
@@ -210,11 +209,12 @@ body {
         margin-right: 0px;
     }
     20% {
-        margin-bottom: 100px;
+        margin-bottom: 80px;
         margin-left: 50px;
     }
     40% {
         margin-left: -50px;
+        margin-bottom: 100px;
     }
     100% {
         margin-left: 0px;
