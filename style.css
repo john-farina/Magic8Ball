@@ -34,6 +34,7 @@ body {
 }
 
 #ball-container {
+    position: absolute;
     z-index: 2;
     display: flex;
     align-items: center;
@@ -42,6 +43,7 @@ body {
     width: 400px;
     height: 400px;
     background: var(--ballGradient);
+    margin-bottom: 150px;
 }
 
 .ballFadeOut {
@@ -147,6 +149,8 @@ body {
 }
 
 #resetButton {
+    margin-top: 500px;
+    position: fixed;
     z-index: 2;
     border-radius: 100%;
     border-style: solid;
@@ -202,11 +206,11 @@ body {
     0% {
         margin-left: 0px;
         margin-top: 0px;
-        margin-bottom: 0px;
+        margin-bottom: 150px;
         margin-right: 0px;
     }
     20% {
-        margin-bottom: 20px;
+        margin-bottom: 100px;
         margin-left: 50px;
     }
     40% {
@@ -215,7 +219,7 @@ body {
     100% {
         margin-left: 0px;
         margin-top: 0px;
-        margin-bottom: 0px;
+        margin-bottom: 150px;
         margin-right: 0px;
     }
 }
