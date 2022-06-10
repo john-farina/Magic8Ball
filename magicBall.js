@@ -26,6 +26,7 @@ const phrases = [
     'What Do You Think?',
 ];
 let animationGoing = false;
+let shakeIsGoing = false;
 
 const magicBall = document.querySelector('#ball-container');
 const ballLogo = document.querySelector('#ball_logo');
@@ -51,12 +52,15 @@ function addAnimateClass(object, classname, seconds) {
 
 function sayRandomThing() {
     let randomNum = randomNumGen(26);
-
+    shakeIsGoing = true;
     addAnimateClass(magicBall, 'shake', 2);
     addAnimateClass(triangle, 'fadeOut', 1);
     setTimeout(function () {
         fortuneText.innerHTML = phrases[randomNum].toUpperCase();
         addAnimateClass(triangle, 'fadeIn', 2);
+        setTimeout(function () {
+            shakeIsGoing = false;
+        }, 1800);
     }, 900);
 }
 
@@ -72,7 +76,7 @@ function introAnimation() {
 }
 
 resetButton.addEventListener('click', function () {
-    if (animationGoing != true) {
+    if (animationGoing != true && shakeIsGoing != true) {
         sayRandomThing();
     }
 });
