@@ -27,6 +27,7 @@ const phrases = [
 ];
 let animationGoing = false;
 let shakeIsGoing = false;
+let firstTimeOpen = true;
 
 const magicBall = document.querySelector('#ball-container');
 const ballLogo = document.querySelector('#ball_logo');
@@ -67,20 +68,32 @@ function sayRandomThing() {
 function introAnimation() {
     ballLogo.style.display = 'flex';
     ballInnerCircle.style.display = 'none';
+    addAnimateClass(ballLogo, 'logoShrink', 3);
     addAnimateClass(magicBall, 'ballFadeOut', 3);
     setTimeout(function () {
         ballLogo.style.display = 'none';
         ballInnerCircle.style.display = 'flex';
+        addAnimateClass(ballInnerCircle, 'innerGrow', 3);
         addAnimateClass(magicBall, 'ballFadeIn', 3);
+        addAnimateClass(triangle, 'triangleGrow', 3);
+        addAnimateClass(fortuneText, 'fortuneGrow', 3);
     }, 2900);
 }
 
 resetButton.addEventListener('click', function () {
-    if (animationGoing != true && shakeIsGoing != true) {
+    if (firstTimeOpen === true) {
+        introAnimation();
+        firstTimeOpen = false;
+    } else if (
+        firstTimeOpen === false &&
+        animationGoing != true &&
+        shakeIsGoing != true
+    ) {
         sayRandomThing();
     }
 });
-introAnimation();
+
+// introAnimation();
 
 // const myShakeEvent = new Shake({
 //     threshold: 15, // optional shake strength threshold
