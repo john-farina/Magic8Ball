@@ -8,6 +8,16 @@
         <link rel="stylesheet" href="style.css" />
         <script src="./magicBall.js" defer></script>
         <script src="shake.js"></script>
+        <script
+            src="https://kit.fontawesome.com/4c3322bec2.js"
+            crossorigin="anonymous"
+        ></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Lato&display=swap"
+            rel="stylesheet"
+        />
     </head>
     <body>
         <video autoplay muted loop id="myVideo">
@@ -15,6 +25,9 @@
         </video>
 
         <div id="ball-container">
+            <div id="ball_logo">
+                <h1 id="logo_text">8</h1>
+            </div>
             <div id="ball_inner-circle">
                 <div id="inner-circle_triangle">
                     <div id="triangle_text">
@@ -23,6 +36,8 @@
                 </div>
             </div>
         </div>
-        <button id="resetButton">reset</button>
+        <button id="resetButton">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+        </button>
     </body>
 </html>

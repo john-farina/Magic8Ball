@@ -28,6 +28,8 @@ const phrases = [
 let animationGoing = false;
 
 const magicBall = document.querySelector('#ball-container');
+const ballLogo = document.querySelector('#ball_logo');
+const ballInnerCircle = document.querySelector('#ball_inner-circle');
 const triangle = document.querySelector('#inner-circle_triangle');
 const fortuneText = document.querySelector('#fortuneText');
 const resetButton = document.querySelector('#resetButton');
@@ -55,7 +57,18 @@ function sayRandomThing() {
     setTimeout(function () {
         fortuneText.innerHTML = phrases[randomNum].toUpperCase();
         addAnimateClass(triangle, 'fadeIn', 2);
-    }, 1000);
+    }, 900);
+}
+
+function introAnimation() {
+    ballLogo.style.display = 'flex';
+    ballInnerCircle.style.display = 'none';
+    addAnimateClass(magicBall, 'ballFadeOut', 3);
+    setTimeout(function () {
+        ballLogo.style.display = 'none';
+        ballInnerCircle.style.display = 'flex';
+        addAnimateClass(magicBall, 'ballFadeIn', 3);
+    }, 2900);
 }
 
 resetButton.addEventListener('click', function () {
@@ -63,6 +76,7 @@ resetButton.addEventListener('click', function () {
         sayRandomThing();
     }
 });
+introAnimation();
 
 // const myShakeEvent = new Shake({
 //     threshold: 15, // optional shake strength threshold
