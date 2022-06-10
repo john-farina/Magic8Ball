@@ -80,6 +80,27 @@ function introAnimation() {
     }, 2900);
 }
 
+function startAnimation() {
+    if (firstTimeOpen === true) {
+        resetButton.classList.add('resetAnimation');
+    } else if (firstTimeOpen === false) {
+        setTimeout(function () {
+            resetButton.classList.remove('resetAnimation');
+        }, 6000);
+    }
+}
+
+function updateFunctions() {
+    startAnimation();
+}
+function animationLoop() {
+    updateFunctions();
+}
+function start() {
+    setInterval(animationLoop, 300);
+}
+start();
+
 resetButton.addEventListener('click', function () {
     if (firstTimeOpen === true) {
         introAnimation();
