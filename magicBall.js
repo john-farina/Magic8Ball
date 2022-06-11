@@ -28,6 +28,7 @@ const phrases = [
 let animationGoing = false;
 let shakeIsGoing = false;
 let firstTimeOpen = true;
+let startAnimationGoing = false;
 
 const magicBall = document.querySelector('#ball-container');
 const ballLogo = document.querySelector('#ball_logo');
@@ -66,6 +67,7 @@ function sayRandomThing() {
 }
 
 function introAnimation() {
+    startAnimationGoing = true;
     ballLogo.style.display = 'flex';
     ballInnerCircle.style.display = 'none';
     addAnimateClass(ballLogo, 'logoShrink', 3);
@@ -77,6 +79,9 @@ function introAnimation() {
         addAnimateClass(magicBall, 'ballFadeIn', 3);
         addAnimateClass(triangle, 'triangleGrow', 3);
         addAnimateClass(fortuneText, 'fortuneGrow', 3);
+        setTimeout(function () {
+            startAnimationGoing = false;
+        }, 3000);
     }, 2900);
 }
 
@@ -102,10 +107,11 @@ function start() {
 start();
 
 resetButton.addEventListener('click', function () {
-    if (firstTimeOpen === true) {
+    if (firstTimeOpen === true && startAnimationGoing === false) {
         introAnimation();
         firstTimeOpen = false;
     } else if (
+        startAnimationGoing === false &&
         firstTimeOpen === false &&
         animationGoing != true &&
         shakeIsGoing != true
