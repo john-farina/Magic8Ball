@@ -165,6 +165,7 @@ body {
     border-style: solid;
     border-color: rgb(44, 44, 44);
     border-width: 2px;
+    touch-action: manipulation;
 }
 .resetAnimation {
     animation-name: buttonGrow;
