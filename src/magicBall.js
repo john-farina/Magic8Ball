@@ -123,15 +123,18 @@ resetButton.addEventListener('click', function () {
 
 introAnimation();
 
-const myShakeEvent = new Shake({
-    threshold: 15, // optional shake strength threshold
-    timeout: 1000, // optional, determines the frequency of event generation
-});
-
-window.addEventListener('shake', shakeEventDidOccur, false);
-//function to call when shake occurs
-function shakeEventDidOccur() {
-    //put your own code here etc.
-    alert('shake!');
-}
-myShakeEvent.start();
+window.onload = function () {
+    //create a new instance of shake.js.
+    var myShakeEvent = new Shake({
+        threshold: 15,
+    });
+    // start listening to device motion
+    myShakeEvent.start();
+    // register a shake event
+    window.addEventListener('shake', shakeEventDidOccur, false);
+    //shake event callback
+    function shakeEventDidOccur() {
+        //put your own code here etc.
+        alert('Shake!');
+    }
+};
