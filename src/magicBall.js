@@ -1,3 +1,4 @@
+const Shake = require('shake.js');
 const phrases = [
     'As I see it, yes',
     'Ask again later',
@@ -122,14 +123,10 @@ resetButton.addEventListener('click', function () {
 
 introAnimation();
 
-const Shake = require('shake.js');
-
 const myShakeEvent = new Shake({
     threshold: 15, // optional shake strength threshold
     timeout: 1000, // optional, determines the frequency of event generation
 });
-
-myShakeEvent.start();
 
 window.addEventListener('shake', shakeEventDidOccur, false);
 //function to call when shake occurs
@@ -137,3 +134,4 @@ function shakeEventDidOccur() {
     //put your own code here etc.
     alert('shake!');
 }
+myShakeEvent.start();
