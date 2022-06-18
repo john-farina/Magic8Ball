@@ -1,4 +1,3 @@
-const Shake = require('shake.js');
 const phrases = [
     'As I see it, yes',
     'Ask again later',
@@ -123,7 +122,12 @@ resetButton.addEventListener('click', function () {
 
 introAnimation();
 
+const _ = require('lodash');
+const Shake = require('shake.js');
+
 window.onload = function () {
+    let camelString = _.camelCase('hello this is a simple string');
+    console.log(camelString);
     //create a new instance of shake.js.
     var myShakeEvent = new Shake({
         threshold: 15,
