@@ -48,6 +48,7 @@ body {
 .ballFadeOut {
     animation: ballFadeOut 3s;
 }
+
 .ballFadeIn {
     animation: ballFadeIn 3s;
 }
@@ -67,9 +68,11 @@ body {
     font-family: 'Kdam Thmor Pro', sans-serif;
     font-size: 4rem;
 }
+
 #logo_text {
     color: rgb(29, 29, 29);
 }
+
 .logoShrink {
     animation-name: logoShrink;
     animation-duration: 3s;
@@ -87,6 +90,7 @@ body {
     border-color: rgb(31, 31, 31);
     border-width: 6px;
 }
+
 .innerGrow {
     animation-name: innerCircleGrow;
     animation-duration: 3s;
@@ -103,6 +107,7 @@ body {
     background: var(--blueGradient);
     margin-bottom: 20px;
 }
+
 .triangleGrow {
     animation-name: triangleGrow;
     animation-duration: 3s;
@@ -111,6 +116,7 @@ body {
 .fadeIn {
     animation: fadeIn 1s;
 }
+
 .fadeOut {
     animation: fadeOut 1s;
 }
@@ -137,6 +143,7 @@ body {
     margin-bottom: 0px;
     text-shadow: -1px 2px 1px rgba(30, 54, 128, 0.6);
 }
+
 .fortuneGrow {
     animation-name: fortuneGrow;
     animation-duration: 3s;
@@ -148,12 +155,13 @@ body {
 }
 
 #resetButton {
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 600px;
     position: fixed;
-    z-index: 2;
+    z-index: 4;
     border-radius: 100%;
     border-style: solid;
     border-color: black;
@@ -167,6 +175,7 @@ body {
     border-width: 2px;
     touch-action: manipulation;
 }
+
 .resetAnimation {
     animation-name: buttonGrow;
     animation-duration: 2s;
@@ -201,6 +210,7 @@ body {
         opacity: 100%;
     }
 }
+
 @keyframes fadeOut {
     0% {
         height: 130px;
@@ -259,6 +269,7 @@ body {
         opacity: 0%;
     }
 }
+
 @keyframes ballFadeIn {
     0% {
         width: 200px;
@@ -300,6 +311,7 @@ body {
         height: 240px;
     }
 }
+
 @keyframes triangleGrow {
     0% {
         height: 65px;
@@ -310,6 +322,7 @@ body {
         width: 150px;
     }
 }
+
 @keyframes fortuneGrow {
     0% {
         font-size: 8px;
