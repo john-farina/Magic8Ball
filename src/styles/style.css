@@ -159,21 +159,17 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 600px;
-    position: fixed;
+    position: absolute;
+    bottom: 0;
     z-index: 4;
     border-radius: 100%;
-    border-style: solid;
-    border-color: black;
-    border-width: 3px;
     background-color: rgb(61, 61, 61);
     width: 50px;
     height: 50px;
-    font-size: 20px;
-    border-style: solid;
-    border-color: rgb(44, 44, 44);
-    border-width: 2px;
+    font-size: 1rem;
+    border: solid 2px rgb(44,44,44);
     touch-action: manipulation;
+    margin-bottom: 50px;
 }
 
 .resetAnimation {
@@ -189,7 +185,16 @@ body {
 
 @media screen and (max-width: 600px) {
     #resetButton {
-        margin-top: 300px;
+    }
+    #ball-container {
+        scale: 90%
+    }
+}
+@media screen and (max-height: 600px) {
+    #resetButton {
+    }
+    #ball-container {
+        scale: 70%
     }
 }
 
@@ -334,19 +339,13 @@ body {
 
 @keyframes buttonGrow {
     0% {
-        width: 50px;
-        height: 50px;
-        font-size: 20px;
+        scale: 100%;
     }
     50% {
-        width: 45px;
-        height: 45px;
-        font-size: 17px;
+        scale: 110%;
     }
 
     100% {
-        width: 50px;
-        height: 50px;
-        font-size: 20px;
+        scale: 100%;
     }
 }
