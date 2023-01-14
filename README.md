@@ -58,8 +58,6 @@ Im using javascript to add animations, and animation logic. With a long array of
  - Javascript
  - CSS
 <br/>
-<br/>
-
 
 ## JavaScript
 
