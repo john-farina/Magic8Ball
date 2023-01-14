@@ -76,22 +76,27 @@ the animations are triggered when the user presses the button. when first opened
 *For all of the design i am using HTML and designing it with CSS*
 ####  **Outer Ball**
 For the outer ball i placed a white circle inside of another larger black circle with a black 8 inside of the smaller, the classic 8 ball look
+<br/>
+<img src="./src/img/readme/outer.png" width="120"/>
 <!-- image of outside -->
 
 #### **Inner Ball**
 For the Inner Ball i created the size smaller circle as the front but made it black trying to resemble like liquid filling inside of the 8 Ball
+<br/>
+<img src="./src/img/readme/backside.png" width="120"/>
 
 #### **Inner Phrase Triangle**
 Trying to make the same look of a magic 8 ball i used a slight gradient on the Traingle which is a div that i shaped with CSS. Each Phrase goes into the triangle as the triangle fades in and out.
+<br/>
+<img src="./src/img/readme/triangle.png" width="110"/>
 <!-- image of traingle -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<br/>
 
 ## Usage
 
-Open Zoltar when you're facing troubles, open Zoltar when you're curious. Get fortunes *(without the quarters!)*
+Ask Magic 8 Ball anything. when you dont know what to do let it decide for you.
 <br/>
 <br/>
 
