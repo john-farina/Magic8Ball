@@ -50,7 +50,7 @@ For this project i am using Vanilla JS in an attempt to fully master it, This pr
 
 Im using javascript to add animations, and animation logic. With a long array of phrases so it can give random responses for each question.
 
-<img src="./src/img/readme/8ball-shake%20(1).gif" alt="Zoltars fortune sliding down the screen and closing it" />
+<img src="./src/img/readme/8ball-shake.gif" alt="Zoltars fortune sliding down the screen and closing it" />
 
 <br/>
 
