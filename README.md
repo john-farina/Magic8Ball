@@ -46,11 +46,11 @@
 
 For this project i am using Vanilla JS in an attempt to fully master it, This project is of course based off of a Magic 8 Ball a toy people use to ask yes or no questions. Its a simple enough project but designed more to feel like a actual Magic 8 Ball
 
-<img src="./src/img/ZoltarFirst.gif" alt="a gif of Zoltar with hand moving and lamps flickering" />
+<img src="./src/img/readme/8Ball-Opening.gif" alt="a gif of Zoltar with hand moving and lamps flickering" />
 
 Im using javascript to add animations, and animation logic. With a long array of phrases so it can give random responses for each question.
 
-<img src="./src/img/ZoltarSecond.gif" alt="Zoltars fortune sliding down the screen and closing it" />
+<img src="./src/img/readme/8ball-shake%20(1).gif" alt="Zoltars fortune sliding down the screen and closing it" />
 
 <br/>
 
