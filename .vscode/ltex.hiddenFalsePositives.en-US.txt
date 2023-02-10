@@ -1,0 +1,1 @@
+{"rule":"COMMA_COMPOUND_SENTENCE","sentence":"^\\QWith a long array of phrases so it can give random responses for each question.\\E$"}
